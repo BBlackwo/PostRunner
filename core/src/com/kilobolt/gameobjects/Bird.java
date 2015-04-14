@@ -1,4 +1,4 @@
-package com.kilobolt.com.bblackwo.gameobjects;
+package com.kilobolt.gameobjects;
 
 import com.badlogic.gdx.math.Vector2;
 

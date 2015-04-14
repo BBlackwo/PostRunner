@@ -5,6 +5,8 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.kilobolt.gameworld.GameRenderer;
 import com.kilobolt.gameworld.GameWorld;
+import com.kilobolt.zbHelpers.InputHandler;
+import com.kilobolt.zombiebird.ZBC;
 
 /**
  * Created by Benjamin on 13/04/2015.
@@ -21,7 +23,7 @@ public class GameScreen implements Screen {
         // Get size information
         float screenWidth = Gdx.graphics.getWidth();
         float screenHeight = Gdx.graphics.getHeight();
-        float gameWidth = 136;
+        float gameWidth = ZBC.GAME_WIDTH;
         float gameHeight = screenHeight / (screenWidth / gameWidth); // scale to same factor as width
 
         int midPointY = (int) (gameHeight /2);
@@ -29,6 +31,9 @@ public class GameScreen implements Screen {
         // Initialize objects
         world = new GameWorld(midPointY);
         renderer = new GameRenderer(world);
+
+        // Set up InputProcessor
+        Gdx.input.setInputProcessor(new InputHandler(world.getBird()));
     }
 
     // Essentially our game loop. Firstly, we will update all our game objects. Secondly, we will render those game objects.

@@ -1,7 +1,7 @@
 package com.kilobolt.gameworld;
 
 import com.badlogic.gdx.Gdx;
-import com.kilobolt.com.bblackwo.gameobjects.Bird;
+import com.kilobolt.gameobjects.Bird;
 
 /**
  * Created by Benjamin on 14/04/2015.
