@@ -1,9 +1,9 @@
-package com.bblackwo.postrunner.client;
+package com.kilobolt.zombiebird.client;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.bblackwo.postrunner.PRGame;
+import com.kilobolt.zombiebird.ZBGame;
 
 public class HtmlLauncher extends GwtApplication {
 
@@ -14,6 +14,6 @@ public class HtmlLauncher extends GwtApplication {
 
         @Override
         public ApplicationListener getApplicationListener () {
-                return new PRGame();
+                return new ZBGame();
         }
 }

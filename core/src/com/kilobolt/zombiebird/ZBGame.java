@@ -1,10 +1,10 @@
-package com.bblackwo.postrunner;
+package com.kilobolt.zombiebird;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.bblackwo.screens.GameScreen;
+import com.kilobolt.screens.GameScreen;
 
-public class PRGame extends Game {
+public class ZBGame extends Game {
 
 	@Override
 	public void create() {

@@ -1,16 +1,16 @@
-package com.bblackwo.postrunner.desktop;
+package com.kilobolt.zombiebird.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.bblackwo.postrunner.PRC;
-import com.bblackwo.postrunner.PRGame;
+import com.kilobolt.zombiebird.ZBC;
+import com.kilobolt.zombiebird.ZBGame;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.title = "Post Rider";
-		config.width = PRC.GAME_WIDTH*2;
-		config.height = PRC.GAME_HEIGHT*2;
-		new LwjglApplication(new PRGame(), config);
+		config.width = ZBC.GAME_WIDTH*2;
+		config.height = ZBC.GAME_HEIGHT*2;
+		new LwjglApplication(new ZBGame(), config);
 	}
 }

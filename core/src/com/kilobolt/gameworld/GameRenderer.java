@@ -1,11 +1,11 @@
-package com.bblackwo.gameworld;
+package com.kilobolt.gameworld;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
-import com.bblackwo.postrunner.PRC;
+import com.kilobolt.zombiebird.ZBC;
 
 /**
  * Created by Benjamin on 14/04/2015.
@@ -21,7 +21,7 @@ public class GameRenderer {
         this.myWorld = world;
 
         cam = new OrthographicCamera();
-        cam.setToOrtho(true, PRC.GAME_WIDTH, PRC.GAME_HEIGHT);
+        cam.setToOrtho(true, ZBC.GAME_WIDTH, ZBC.GAME_HEIGHT);
 
         shapeRenderer = new ShapeRenderer();
         shapeRenderer.setProjectionMatrix(cam.combined);
@@ -46,7 +46,7 @@ public class GameRenderer {
         shapeRenderer.setColor(87 / 255.0f, 109 / 255.0F, 120 / 255.0f, 1);
 
         // Draws the rectangle from myWorld
-        shapeRenderer.rect(myWorld.getRect().x, myWorld.getRect().y, myWorld.getRect().width, myWorld.getRect().height);
+        //shapeRenderer.rect(myWorld.getRect().x, myWorld.getRect().y, myWorld.getRect().width, myWorld.getRect().height);
 
         // Tells the shapeRenderer to finish rendering
         /** We MUST do this every time **/
@@ -62,8 +62,8 @@ public class GameRenderer {
         shapeRenderer.setColor(255 / 255.0f, 109 / 255.0f, 120 / 255.0f, 1);
 
         // Draws the rectangle from myWorld (Using ShapeType.Line)
-        shapeRenderer.rect(myWorld.getRect().x, myWorld.getRect().y,
-                myWorld.getRect().width, myWorld.getRect().height);
+        //shapeRenderer.rect(myWorld.getRect().x, myWorld.getRect().y,
+        // myWorld.getRect().width, myWorld.getRect().height);
 
         shapeRenderer.end();
     }

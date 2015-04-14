@@ -4,7 +4,7 @@ sourceCompatibility = '1.7'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 ext {
-	mainClassName = "com.bblackwo.postrunner.IOSLauncher"
+	mainClassName = "com.kilobolt.zombiebird.IOSLauncher"
 }
 
 // Extracts native libs (*.a) from the native-ios.jar and places them

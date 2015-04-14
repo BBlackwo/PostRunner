@@ -1,10 +1,10 @@
-package com.bblackwo.screens;
+package com.kilobolt.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
-import com.bblackwo.gameworld.GameRenderer;
-import com.bblackwo.gameworld.GameWorld;
+import com.kilobolt.gameworld.GameRenderer;
+import com.kilobolt.gameworld.GameWorld;
 
 /**
  * Created by Benjamin on 13/04/2015.
@@ -18,8 +18,16 @@ public class GameScreen implements Screen {
     public GameScreen() {
         Gdx.app.log("GameScreen", "Attached");
 
+        // Get size information
+        float screenWidth = Gdx.graphics.getWidth();
+        float screenHeight = Gdx.graphics.getHeight();
+        float gameWidth = 136;
+        float gameHeight = screenHeight / (screenWidth / gameWidth); // scale to same factor as width
+
+        int midPointY = (int) (gameHeight /2);
+
         // Initialize objects
-        world = new GameWorld();
+        world = new GameWorld(midPointY);
         renderer = new GameRenderer(world);
     }
 
