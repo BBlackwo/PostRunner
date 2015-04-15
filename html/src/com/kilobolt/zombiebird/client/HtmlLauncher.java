@@ -5,6 +5,7 @@ import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
 import com.kilobolt.zombiebird.ZBGame;
 
+
 public class HtmlLauncher extends GwtApplication {
 
         @Override
